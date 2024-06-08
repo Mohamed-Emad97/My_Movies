@@ -1,0 +1,43 @@
+@use "../../Sass/Varibles.scss" as *;
+@use "../../Sass/Mixin.scss" as *;
+
+#scroll_gallery{
+    .movie_card{
+        overflow: hidden;
+        cursor: pointer;
+        .img{
+            overflow: hidden;
+            img{
+                transform: scale(.95);
+                filter: blur(0.09rem);
+                transition: all ease 1s;
+            }
+        }
+        &:hover img{
+            transform: scale(1);
+            filter: blur(0);
+        }
+        .title{
+            color: $font-Color;
+            font-size: $font-size;
+            transition: color ease 1s;
+            &:hover{
+                color: $second-FontColor;
+            }
+        }
+        .rating{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 30px;
+            height: 30px;
+            background-color: $bg-Transparent;
+            color: $font-Color;
+            opacity: 0;
+            transition: all ease 1s;
+        }
+        &:hover .rating{
+            opacity: 1;
+        }
+    }
+}

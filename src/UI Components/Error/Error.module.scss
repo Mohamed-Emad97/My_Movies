@@ -1,0 +1,23 @@
+@use "../../Sass/Varibles.scss" as *;
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $bg-Color;
+    .error-content {
+      text-align: center;
+      .error-heading , .error-icon {
+        font-size: 2em;
+        color: #ff3333;
+        margin-bottom: 10px;
+      }
+      
+      .error-message {
+        font-size: 1.2em;
+        color: $font-Color;
+        margin-bottom: 20px;
+      }
+    }
+  }

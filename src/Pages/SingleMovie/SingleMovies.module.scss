@@ -1,0 +1,44 @@
+@use "../../Sass/Varibles.scss" as *;
+@use "../../Sass/Mixin.scss" as *;
+
+#movie_details{
+    .img{
+        img{
+            border-radius: 10px;
+        }
+    }
+    .details{
+        .title , .g_btns , .vote , .popularity , .date , .overview{
+            color: $font-Color;
+        }
+        .title{
+            transition: color ease 1s;
+            cursor: pointer;
+            &:hover{
+                color: $lightBg-Color;
+            }
+        }
+        .geners{
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            .g_btns{
+                border: 1px solid $bg-Transparent;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: transparent;
+                cursor: pointer;
+                transition: all ease 1s;
+                &:hover{
+                    background-color: $bg-Transparent;
+                }
+            }
+        }
+        .vote , .popularity , .date , .overview{
+            span{
+                color: $second-FontColor;
+                margin-right: 5px;
+            }
+        }
+    }
+}

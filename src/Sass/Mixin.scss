@@ -1,0 +1,31 @@
+//Centering By Flex 
+@mixin centerFlex () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Overlay Bg
+@mixin overlay($bg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg;
+}
+
+//For Social Media Icons
+@mixin Social () {
+    $socials: ("facebook": #1877f2, "twitter": #1da1f2, "dribble": #9ba5a8, "google": #dd4b39, "github": #333,"instagram": #e1306c, "linkedin": #313335, "pinterest": #e60023, "youtube": #ff0000);
+
+    @each $name, $color in $socials {
+        .#{$name}{
+            cursor: pointer;
+            transition: all 1s;
+        }
+        .#{$name}:hover{
+            color: $color !important;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use "../../Sass/Varibles.scss" as *;
+@use "../../Sass/Mixin.scss" as *;
+
+footer{
+    p{
+        color: $font-Color;
+        font-size: $font-size;
+        .heart_icon{
+            color: red;
+        }
+    }
+    .social{
+        gap: 10px;
+        span{
+            color: $font-Color !important;
+            font-size: $font-size;
+        }
+        @include Social();
+    }
+}

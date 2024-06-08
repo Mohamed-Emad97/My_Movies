@@ -1,0 +1,30 @@
+@use "../../Sass/Varibles.scss" as *;
+
+@use "../../Sass/Mixin.scss" as *;
+
+header {
+    background-color: transparent;
+    position: relative;
+    z-index: 100000000;
+    nav{
+        .logo, .link{
+            color: $font-Color;
+            transition: color ease 1s;
+            &:hover, &:focus{
+                color: $second-FontColor;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 997px) {
+    header {
+        nav{
+            ul{
+                @include centerFlex();
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../../Sass/Mixin.scss" as *;
+@use "../../Sass/Varibles.scss" as *;
+
+#search{
+    min-height: 100vh;
+    h2{
+        color: $font-Color;
+    }
+    .search_bar{
+        gap: 5px;
+        padding: 20px;
+        border-radius: 10px;
+        &:focus-within {
+            border: 1px solid $bg-Transparent;
+        }
+        .searchIcon{
+            font-size: $font-size;
+            color: $font-Color;
+            transition: all ease 1s;
+        }
+        .searchInput{
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: $font-Color;
+            font-size: $font-size;
+        }
+        .selectInput{
+            background-color: transparent;
+            font-size: $font-size;
+            color: $font-Color;
+            border: none;
+            outline: none;
+            option{
+                background-color: $bg-Color;
+                border: none;
+                outline: none;
+                color: $font-Color;
+                font-size: $font-size;
+            }
+        }
+    }
+}
